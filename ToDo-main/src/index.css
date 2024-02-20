@@ -1,0 +1,128 @@
+@charset "UTF-8";
+
+*:where(:not(html, iframe, canvas, img, svg, video, audio, select, input):not(svg *, symbol *)) {
+  all: unset;
+  display: revert;
+}
+
+
+/* Remove list styles (bullets/numbers) */
+ol,
+ul,
+menu {
+  list-style: none;
+}
+
+/* For images to not be able to exceed their container */
+img {
+  max-inline-size: 100%;
+  max-block-size: 100%;
+}
+
+/* removes spacing between cells in tables */
+table {
+  border-collapse: collapse;
+}
+
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+
+ul,
+ol,
+li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+htmml, body{
+  background-color: #F5F7F7;
+  min-width: 320px;
+  min-height: 100%;
+  font-size: 16px;
+  font-family: Open Sans;
+}
+
+html{
+	scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+.container {
+  width: 800px;
+  margin-inline: auto;
+  margin: 5vh auto;
+}
+
+input {
+  border: 1px solid #de4fd2;
+  border-radius: 10px;
+  padding: 10px 15px;
+  width: 600px;
+}
+
+button {
+  cursor: pointer;
+}
+
+.task_input {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 15px;
+  width: 800px;
+}
+
+.add_btn {
+  background-color: #de4fd2;
+  border-radius: 10px;
+  padding: 10px 15px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.container_task {
+  display: flex;
+  gap: 15px;
+}
+
+.task {
+  border: 1px solid #bf6ed8;
+  min-height: 15px;
+  overflow: auto;
+}
+
+.line {
+  text-decoration: line-through;
+}
+
+.btns {
+  display: flex;
+  gap: 5px;
+  color: #ffffff;
+}
+
+.btn_yes {
+  padding: 10px 15px;
+  background-color: #04ca25;
+  border: none;
+  border-radius: 10px;
+}
+
+.btn_no{
+  padding: 10px 15px;
+  background-color: #c2071a;
+  border: none;
+  border-radius: 10px;
+}
